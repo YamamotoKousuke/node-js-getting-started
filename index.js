@@ -7,7 +7,7 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
-  .get('/n/:status', (req, res) => {
+  .get('/result/:status', (req, res) => {
      var status = req.params.status
      res.json({result:status})
   })
